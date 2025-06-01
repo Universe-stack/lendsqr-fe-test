@@ -1,0 +1,141 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.loginContainer {
+  display: flex;
+  min-height: 100vh;
+  background: #fff;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.leftSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #ffffff;
+  padding-left: 4.1875rem;
+  @include mobile {
+    padding: 1rem;
+  }
+}
+
+.logoWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding-left: 1.875rem;
+  padding-top: 6.5625rem;
+  align-items: center;
+}
+
+.illustrationWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8.6875rem;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #fff;
+  box-shadow: 0 0.9375rem 5.625rem rgba(0, 0, 0, 0.03);
+  border-left: 0.125rem solid rgba(84, 95, 125, 0.05);
+  @include mobile {
+  }
+}
+
+.formWrapper {
+  margin-left: 6.25rem;
+  margin-top: 13.75rem;
+  width: 100%;
+  max-width: 27.9375rem;
+  h1 {
+    color: $text-dark;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+    line-height: 100%;
+    letter-spacing: -4%;
+    font-family: $font-family;
+  }
+  p {
+    color: $text-medium;
+    margin-bottom: 3.75rem;
+    font-size: 1.25rem;
+    font-family: $font-family;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 3.125rem;
+  padding: 1rem 1.09375rem;
+  margin-bottom: 1.5rem;
+  border: 0.0625rem solid #545F7D26;
+  border-radius: 0.3125rem;
+  background-color: transparent !important;
+  font-size: 0.875rem;
+  font-family: $font-family;
+  &:focus {
+    outline: none;
+    border-color: $primary-teal;
+  }
+}
+
+.passwordWrapper {
+  position: relative;
+  .showBtn {
+    position: absolute;
+    right: 1rem;
+    top: 35%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: $primary-teal;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 0;
+  }
+}
+
+.forgotPassword {
+  display: block;
+  color: $primary-teal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1.875rem;
+  text-align: right;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.loginBtn {
+  width: 100%;
+  background: $primary-teal;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.8125rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: $font-family;
+  &:hover {
+    background: darken($primary-teal, 10%);
+  }
+} 

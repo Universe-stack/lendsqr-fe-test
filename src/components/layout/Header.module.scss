@@ -1,0 +1,161 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 30px;
+  background: #fff;
+  box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #eee;
+
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+  }
+}
+
+.hamburgerButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 10px;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.searchContainer {
+  flex: 1;
+  margin-left: 168.2px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.searchWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 40px;
+}
+
+.searchInput {
+  border: 1px solid #213F7D33;
+  height: 40px;
+  flex: 1;
+  padding: 8px 16px;
+  outline: none;
+  font-size: 14px;
+  border-radius: 8px 0 0 8px;
+  color: #545F7D;
+}
+
+.searchButton {
+  width: 56px;
+  height: 40px;
+  padding: 13px 21px;
+  background-color: #39CDCC;
+  border-radius: 0 8px 8px 0;
+  border: 1px solid #213F7D33;
+  cursor: pointer;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-right: 30px;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+    margin-right: 0;
+  }
+}
+
+.docsLink {
+  color: #545F7D;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  margin-right: 47px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.notificationIcon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 11px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    animation: gentleShake 0.5s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
+}
+
+@keyframes gentleShake {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+.userSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 8px;
+  }
+}
+
+.avatarContainer {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #39CDCC;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+    margin-right: 0;
+  }
+}
+
+.userName {
+  color: #545F7D;
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 4px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-right: 0;
+  }
+}
+
+.dropdownButton {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+
+  @media (max-width: 768px) {
+    padding: 4px;
+  }
+} 

@@ -1,0 +1,19 @@
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+  
+}
+
+.mainContent {
+  flex: 1;
+  background: #FBFBFB;
+}
+
+.pageContent {
+  padding: 60px;
+  width: 83%
+} 
+
+.layoutBody {
+  display:  flex;;
+}

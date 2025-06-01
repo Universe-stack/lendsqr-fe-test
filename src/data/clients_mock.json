@@ -1,0 +1,737 @@
+[
+  {
+    "userId": "LSQF587g90",
+    "fullName": "Grace Effiom",
+    "organization": "Paystack",
+    "status": "Pending",
+    "username": "grace22",
+    "email": "grace@gmail.com",
+    "phoneNumber": "07060780922",
+    "bvn": "22345678901",
+    "gender": "Female",
+    "maritalStatus": "Single",
+    "children": "None",
+    "residenceType": "Parent's Apartment",
+    "tier": "Tier 2",
+    "accountBalance": "₦200,000.00",
+    "dateJoined": "May 15, 2020 10:00 AM",
+    "bankDetails": {
+      "bankName": "Providus Bank",
+      "accountNumber": "9872345678"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "FinTech",
+      "duration": "2 years",
+      "officeEmail": "grace@lendsqr.com",
+      "monthlyIncome": ["₦200,000.00", "₦400,000.00"],
+      "loanRepayment": "₦40,000"
+    },
+    "socials": {
+      "twitter": "@grace_effiom",
+      "facebook": "Grace Effiom",
+      "instagram": "@grace_effiom"
+    },
+    "guarantors": [
+      {
+        "fullName": "Debby Ogana",
+        "phoneNumber": "07060780922",
+        "email": "debby@mail.com",
+        "relationship": "Sister"
+      },
+      {
+        "fullName": "Samuel Effiom",
+        "phoneNumber": "08123456789",
+        "email": "samuel@gmail.com",
+        "relationship": "Brother"
+      }
+    ]
+  },
+  {
+    "userId": "KUDA123x45",
+    "fullName": "Adebayo Ogundimu",
+    "organization": "Kuda Bank",
+    "status": "Active",
+    "username": "adebayo_og",
+    "email": "adebayo.ogundimu@yahoo.com",
+    "phoneNumber": "08012345678",
+    "bvn": "11234567890",
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "children": "2",
+    "residenceType": "Own Apartment",
+    "tier": "Tier 3",
+    "accountBalance": "₦1,500,000.00",
+    "dateJoined": "March 22, 2021 02:30 PM",
+    "bankDetails": {
+      "bankName": "Access Bank",
+      "accountNumber": "0123456789"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "M.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Technology",
+      "duration": "5 years",
+      "officeEmail": "a.ogundimu@techcompany.com",
+      "monthlyIncome": ["₦500,000.00", "₦800,000.00"],
+      "loanRepayment": "₦120,000"
+    },
+    "socials": {
+      "twitter": "@adebayo_tech",
+      "facebook": "Adebayo Ogundimu",
+      "instagram": "@adebayo_og"
+    },
+    "guarantors": [
+      {
+        "fullName": "Folake Ogundimu",
+        "phoneNumber": "08098765432",
+        "email": "folake@gmail.com",
+        "relationship": "Spouse"
+      },
+      {
+        "fullName": "Tunde Adebayo",
+        "phoneNumber": "07034567890",
+        "email": "tunde@yahoo.com",
+        "relationship": "Friend"
+      }
+    ]
+  },
+  {
+    "userId": "FLW789abc2",
+    "fullName": "Chioma Nwosu",
+    "organization": "Flutterwave",
+    "status": "Blacklisted",
+    "username": "chioma_nw",
+    "email": "chioma.nwosu@gmail.com",
+    "phoneNumber": "09087654321",
+    "bvn": "33456789012",
+    "gender": "Female",
+    "maritalStatus": "Single",
+    "children": "1",
+    "residenceType": "Rented Apartment",
+    "tier": "Tier 1",
+    "accountBalance": "₦50,000.00",
+    "dateJoined": "August 10, 2019 09:15 AM",
+    "bankDetails": {
+      "bankName": "GTBank",
+      "accountNumber": "0234567890"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "HND",
+      "employmentStatus": "Self-employed",
+      "sector": "Retail",
+      "duration": "3 years",
+      "officeEmail": "chioma@business.com",
+      "monthlyIncome": ["₦150,000.00", "₦250,000.00"],
+      "loanRepayment": "₦30,000"
+    },
+    "socials": {
+      "twitter": "@chioma_retail",
+      "facebook": "Chioma Nwosu",
+      "instagram": "@chioma_business"
+    },
+    "guarantors": [
+      {
+        "fullName": "Emeka Nwosu",
+        "phoneNumber": "08123456789",
+        "email": "emeka@mail.com",
+        "relationship": "Brother"
+      },
+      {
+        "fullName": "Ada Okoro",
+        "phoneNumber": "07056789012",
+        "email": "ada@gmail.com",
+        "relationship": "Friend"
+      }
+    ]
+  },
+  {
+    "userId": "PGV456def7",
+    "fullName": "Yusuf Abdullahi",
+    "organization": "PiggyVest",
+    "status": "Inactive",
+    "username": "yusuf_abd",
+    "email": "yusuf.abdullahi@hotmail.com",
+    "phoneNumber": "08145678901",
+    "bvn": "44567890123",
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "children": "3",
+    "residenceType": "Own House",
+    "tier": "Tier 2",
+    "accountBalance": "₦800,000.00",
+    "dateJoined": "November 05, 2020 04:45 PM",
+    "bankDetails": {
+      "bankName": "First Bank",
+      "accountNumber": "3456789012"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Education",
+      "duration": "8 years",
+      "officeEmail": "y.abdullahi@school.edu.ng",
+      "monthlyIncome": ["₦300,000.00", "₦450,000.00"],
+      "loanRepayment": "₦70,000"
+    },
+    "socials": {
+      "twitter": "@yusuf_teacher",
+      "facebook": "Yusuf Abdullahi",
+      "instagram": "@yusuf_abd"
+    },
+    "guarantors": [
+      {
+        "fullName": "Aisha Abdullahi",
+        "phoneNumber": "08056789012",
+        "email": "aisha@gmail.com",
+        "relationship": "Spouse"
+      },
+      {
+        "fullName": "Ibrahim Mohammed",
+        "phoneNumber": "07098765432",
+        "email": "ibrahim@yahoo.com",
+        "relationship": "Colleague"
+      }
+    ]
+  },
+  {
+    "userId": "OPY890ghi3",
+    "fullName": "Funmi Adebola",
+    "organization": "Opay",
+    "status": "Pending",
+    "username": "funmi_ade",
+    "email": "funmi.adebola@gmail.com",
+    "phoneNumber": "07023456789",
+    "bvn": "55678901234",
+    "gender": "Female",
+    "maritalStatus": "Divorced",
+    "children": "2",
+    "residenceType": "Rented Apartment",
+    "tier": "Tier 2",
+    "accountBalance": "₦350,000.00",
+    "dateJoined": "February 18, 2022 11:20 AM",
+    "bankDetails": {
+      "bankName": "Zenith Bank",
+      "accountNumber": "4567890123"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "B.A",
+      "employmentStatus": "Employed",
+      "sector": "Healthcare",
+      "duration": "6 years",
+      "officeEmail": "f.adebola@hospital.com",
+      "monthlyIncome": ["₦250,000.00", "₦350,000.00"],
+      "loanRepayment": "₦50,000"
+    },
+    "socials": {
+      "twitter": "@funmi_health",
+      "facebook": "Funmi Adebola",
+      "instagram": "@funmi_ade"
+    },
+    "guarantors": [
+      {
+        "fullName": "Kemi Adebola",
+        "phoneNumber": "08134567890",
+        "email": "kemi@mail.com",
+        "relationship": "Sister"
+      },
+      {
+        "fullName": "Tayo Johnson",
+        "phoneNumber": "09012345678",
+        "email": "tayo@gmail.com",
+        "relationship": "Friend"
+      }
+    ]
+  },
+  {
+    "userId": "BET234jkl8",
+    "fullName": "Daniel Okafor",
+    "organization": "Carbon",
+    "status": "Active",
+    "username": "daniel_ok",
+    "email": "daniel.okafor@outlook.com",
+    "phoneNumber": "08167890123",
+    "bvn": "66789012345",
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "children": "None",
+    "residenceType": "Shared Apartment",
+    "tier": "Tier 1",
+    "accountBalance": "₦120,000.00",
+    "dateJoined": "September 30, 2021 08:30 AM",
+    "bankDetails": {
+      "bankName": "UBA",
+      "accountNumber": "5678901234"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "OND",
+      "employmentStatus": "Unemployed",
+      "sector": "None",
+      "duration": "0 years",
+      "officeEmail": "N/A",
+      "monthlyIncome": ["₦50,000.00", "₦100,000.00"],
+      "loanRepayment": "₦15,000"
+    },
+    "socials": {
+      "twitter": "@daniel_ok",
+      "facebook": "Daniel Okafor",
+      "instagram": "@daniel_okafor"
+    },
+    "guarantors": [
+      {
+        "fullName": "Chika Okafor",
+        "phoneNumber": "07045678901",
+        "email": "chika@yahoo.com",
+        "relationship": "Sister"
+      },
+      {
+        "fullName": "Peter Eze",
+        "phoneNumber": "08178901234",
+        "email": "peter@gmail.com",
+        "relationship": "Friend"
+      }
+    ]
+  },
+  {
+    "userId": "PAL567mno9",
+    "fullName": "Blessing Ikechukwu",
+    "organization": "Palmpay",
+    "status": "Active",
+    "username": "blessing_ik",
+    "email": "blessing.ikechukwu@gmail.com",
+    "phoneNumber": "09034567890",
+    "bvn": "77890123456",
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "children": "1",
+    "residenceType": "Own Apartment",
+    "tier": "Tier 3",
+    "accountBalance": "₦950,000.00",
+    "dateJoined": "January 12, 2023 03:15 PM",
+    "bankDetails": {
+      "bankName": "Stanbic IBTC",
+      "accountNumber": "6789012345"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "M.B.A",
+      "employmentStatus": "Employed",
+      "sector": "Banking",
+      "duration": "4 years",
+      "officeEmail": "b.ikechukwu@bank.com",
+      "monthlyIncome": ["₦600,000.00", "₦900,000.00"],
+      "loanRepayment": "₦150,000"
+    },
+    "socials": {
+      "twitter": "@blessing_banker",
+      "facebook": "Blessing Ikechukwu",
+      "instagram": "@blessing_ik"
+    },
+    "guarantors": [
+      {
+        "fullName": "Chibueze Ikechukwu",
+        "phoneNumber": "08089012345",
+        "email": "chibueze@gmail.com",
+        "relationship": "Spouse"
+      },
+      {
+        "fullName": "Ngozi Okonkwo",
+        "phoneNumber": "07067890123",
+        "email": "ngozi@yahoo.com",
+        "relationship": "Colleague"
+      }
+    ]
+  },
+  {
+    "userId": "CRB890pqr4",
+    "fullName": "Taiwo Ogunleye",
+    "organization": "Renmoney",
+    "status": "Blacklisted",
+    "username": "taiwo_og",
+    "email": "taiwo.ogunleye@hotmail.com",
+    "phoneNumber": "08123456789",
+    "bvn": "88901234567",
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "children": "None",
+    "residenceType": "Parent's House",
+    "tier": "Tier 1",
+    "accountBalance": "₦25,000.00",
+    "dateJoined": "June 14, 2020 01:45 PM",
+    "bankDetails": {
+      "bankName": "Fidelity Bank",
+      "accountNumber": "7890123456"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "SSCE",
+      "employmentStatus": "Student",
+      "sector": "Education",
+      "duration": "0 years",
+      "officeEmail": "taiwo@university.edu.ng",
+      "monthlyIncome": ["₦30,000.00", "₦50,000.00"],
+      "loanRepayment": "₦10,000"
+    },
+    "socials": {
+      "twitter": "@taiwo_student",
+      "facebook": "Taiwo Ogunleye",
+      "instagram": "@taiwo_og"
+    },
+    "guarantors": [
+      {
+        "fullName": "Kehinde Ogunleye",
+        "phoneNumber": "09045678901",
+        "email": "kehinde@gmail.com",
+        "relationship": "Twin Brother"
+      },
+      {
+        "fullName": "Mrs. Ogunleye",
+        "phoneNumber": "08056789012",
+        "email": "mother@yahoo.com",
+        "relationship": "Mother"
+      }
+    ]
+  },
+  {
+    "userId": "RZR123stu5",
+    "fullName": "Aminat Salami",
+    "organization": "Fairmoney",
+    "status": "Inactive",
+    "username": "aminat_sal",
+    "email": "aminat.salami@gmail.com",
+    "phoneNumber": "07012345678",
+    "bvn": "99012345678",
+    "gender": "Female",
+    "maritalStatus": "Widowed",
+    "children": "4",
+    "residenceType": "Own House",
+    "tier": "Tier 2",
+    "accountBalance": "₦450,000.00",
+    "dateJoined": "October 08, 2019 12:00 PM",
+    "bankDetails": {
+      "bankName": "Union Bank",
+      "accountNumber": "8901234567"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "B.Ed",
+      "employmentStatus": "Self-employed",
+      "sector": "Agriculture",
+      "duration": "10 years",
+      "officeEmail": "aminat@farm.com",
+      "monthlyIncome": ["₦200,000.00", "₦400,000.00"],
+      "loanRepayment": "₦60,000"
+    },
+    "socials": {
+      "twitter": "@aminat_farmer",
+      "facebook": "Aminat Salami",
+      "instagram": "@aminat_sal"
+    },
+    "guarantors": [
+      {
+        "fullName": "Fatima Salami",
+        "phoneNumber": "08167890123",
+        "email": "fatima@mail.com",
+        "relationship": "Daughter"
+      },
+      {
+        "fullName": "Alhaji Musa",
+        "phoneNumber": "09078901234",
+        "email": "musa@yahoo.com",
+        "relationship": "Friend"
+      }
+    ]
+  },
+  {
+    "userId": "SPR456vwx0",
+    "fullName": "Emeka Chukwuma",
+    "organization": "Sparkle",
+    "status": "Pending",
+    "username": "emeka_ch",
+    "email": "emeka.chukwuma@outlook.com",
+    "phoneNumber": "08189012345",
+    "bvn": "10123456789",
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "children": "2",
+    "residenceType": "Rented House",
+    "tier": "Tier 2",
+    "accountBalance": "₦680,000.00",
+    "dateJoined": "April 25, 2022 07:30 AM",
+    "bankDetails": {
+      "bankName": "Sterling Bank",
+      "accountNumber": "9012345678"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "B.Eng",
+      "employmentStatus": "Employed",
+      "sector": "Construction",
+      "duration": "7 years",
+      "officeEmail": "e.chukwuma@construction.com",
+      "monthlyIncome": ["₦400,000.00", "₦600,000.00"],
+      "loanRepayment": "₦100,000"
+    },
+    "socials": {
+      "twitter": "@emeka_engineer",
+      "facebook": "Emeka Chukwuma",
+      "instagram": "@emeka_ch"
+    },
+    "guarantors": [
+      {
+        "fullName": "Uchenna Chukwuma",
+        "phoneNumber": "07034567890",
+        "email": "uchenna@gmail.com",
+        "relationship": "Spouse"
+      },
+      {
+        "fullName": "Ikenna Obi",
+        "phoneNumber": "08145678901",
+        "email": "ikenna@yahoo.com",
+        "relationship": "Colleague"
+      }
+    ]
+  },
+  {
+    "userId": "MTN789xyz1",
+    "fullName": "Folake Adeyemi",
+    "organization": "MTN MoMo",
+    "status": "Active",
+    "username": "folake_ade",
+    "email": "folake.adeyemi@gmail.com",
+    "phoneNumber": "08034567890",
+    "bvn": "12345678901",
+    "gender": "Female",
+    "maritalStatus": "Single",
+    "children": "None",
+    "residenceType": "Rented Apartment",
+    "tier": "Tier 2",
+    "accountBalance": "₦320,000.00",
+    "dateJoined": "July 03, 2021 05:20 PM",
+    "bankDetails": {
+      "bankName": "Wema Bank",
+      "accountNumber": "1234567890"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "B.Com",
+      "employmentStatus": "Employed",
+      "sector": "Marketing",
+      "duration": "4 years",
+      "officeEmail": "f.adeyemi@agency.com",
+      "monthlyIncome": ["₦280,000.00", "₦380,000.00"],
+      "loanRepayment": "₦45,000"
+    },
+    "socials": {
+      "twitter": "@folake_marketing",
+      "facebook": "Folake Adeyemi",
+      "instagram": "@folake_ade"
+    },
+    "guarantors": [
+      {
+        "fullName": "Tunde Adeyemi",
+        "phoneNumber": "07089012345",
+        "email": "tunde@gmail.com",
+        "relationship": "Brother"
+      },
+      {
+        "fullName": "Bisi Ogundipe",
+        "phoneNumber": "08145678901",
+        "email": "bisi@yahoo.com",
+        "relationship": "Friend"
+      }
+    ]
+  },
+  {
+    "userId": "VFD234abc8",
+    "fullName": "Kingsley Obiora",
+    "organization": "VFD Microfinance",
+    "status": "Blacklisted",
+    "username": "kingsley_ob",
+    "email": "kingsley.obiora@hotmail.com",
+    "phoneNumber": "09123456789",
+    "bvn": "23456789012",
+    "gender": "Male",
+    "maritalStatus": "Divorced",
+    "children": "1",
+    "residenceType": "Shared Apartment",
+    "tier": "Tier 1",
+    "accountBalance": "₦75,000.00",
+    "dateJoined": "December 12, 2020 02:15 PM",
+    "bankDetails": {
+      "bankName": "Keystone Bank",
+      "accountNumber": "2345678901"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "NCE",
+      "employmentStatus": "Self-employed",
+      "sector": "Transport",
+      "duration": "5 years",
+      "officeEmail": "kingsley@transport.com",
+      "monthlyIncome": ["₦120,000.00", "₦180,000.00"],
+      "loanRepayment": "₦25,000"
+    },
+    "socials": {
+      "twitter": "@kingsley_driver",
+      "facebook": "Kingsley Obiora",
+      "instagram": "@kingsley_ob"
+    },
+    "guarantors": [
+      {
+        "fullName": "Chinedu Obiora",
+        "phoneNumber": "08067890123",
+        "email": "chinedu@mail.com",
+        "relationship": "Brother"
+      },
+      {
+        "fullName": "James Okoro",
+        "phoneNumber": "07056789012",
+        "email": "james@gmail.com",
+        "relationship": "Friend"
+      }
+    ]
+  },
+  {
+    "userId": "ALC567def9",
+    "fullName": "Fatima Ibrahim",
+    "organization": "Alat by Wema",
+    "status": "Pending",
+    "username": "fatima_ib",
+    "email": "fatima.ibrahim@yahoo.com",
+    "phoneNumber": "08156789012",
+    "bvn": "34567890123",
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "children": "3",
+    "residenceType": "Own House",
+    "tier": "Tier 3",
+    "accountBalance": "₦1,200,000.00",
+    "dateJoined": "January 08, 2022 09:45 AM",
+    "bankDetails": {
+      "bankName": "Polaris Bank",
+      "accountNumber": "3456789012"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "M.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Oil & Gas",
+      "duration": "6 years",
+      "officeEmail": "f.ibrahim@oilcompany.com",
+      "monthlyIncome": ["₦800,000.00", "₦1,200,000.00"],
+      "loanRepayment": "₦200,000"
+    },
+    "socials": {
+      "twitter": "@fatima_engineer",
+      "facebook": "Fatima Ibrahim",
+      "instagram": "@fatima_ib"
+    },
+    "guarantors": [
+      {
+        "fullName": "Musa Ibrahim",
+        "phoneNumber": "09078901234",
+        "email": "musa@gmail.com",
+        "relationship": "Spouse"
+      },
+      {
+        "fullName": "Halima Sani",
+        "phoneNumber": "08089012345",
+        "email": "halima@yahoo.com",
+        "relationship": "Sister"
+      }
+    ]
+  },
+  {
+    "userId": "QMN890ghi2",
+    "fullName": "Olumide Bakare",
+    "organization": "QuickTeller",
+    "status": "Inactive",
+    "username": "olumide_bk",
+    "email": "olumide.bakare@outlook.com",
+    "phoneNumber": "07045678901",
+    "bvn": "45678901234",
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "children": "None",
+    "residenceType": "Parent's House",
+    "tier": "Tier 1",
+    "accountBalance": "₦95,000.00",
+    "dateJoined": "September 14, 2019 06:30 PM",
+    "bankDetails": {
+      "bankName": "Heritage Bank",
+      "accountNumber": "4567890123"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "B.A",
+      "employmentStatus": "Unemployed",
+      "sector": "None",
+      "duration": "0 years",
+      "officeEmail": "N/A",
+      "monthlyIncome": ["₦40,000.00", "₦80,000.00"],
+      "loanRepayment": "₦12,000"
+    },
+    "socials": {
+      "twitter": "@olumide_bk",
+      "facebook": "Olumide Bakare",
+      "instagram": "@olumide_bakare"
+    },
+    "guarantors": [
+      {
+        "fullName": "Adunni Bakare",
+        "phoneNumber": "08134567890",
+        "email": "adunni@gmail.com",
+        "relationship": "Mother"
+      },
+      {
+        "fullName": "Segun Adebayo",
+        "phoneNumber": "09012345678",
+        "email": "segun@yahoo.com",
+        "relationship": "Friend"
+      }
+    ]
+  },
+  {
+    "userId": "REM123jkl4",
+    "fullName": "Ngozi Okwu",
+    "organization": "Remita",
+    "status": "Active",
+    "username": "ngozi_ok",
+    "email": "ngozi.okwu@gmail.com",
+    "phoneNumber": "08187654321",
+    "bvn": "56789012345",
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "children": "2",
+    "residenceType": "Own Apartment",
+    "tier": "Tier 2",
+    "accountBalance": "₦580,000.00",
+    "dateJoined": "March 17, 2021 11:10 AM",
+    "bankDetails": {
+      "bankName": "FCMB",
+      "accountNumber": "5678901234"
+    },
+    "educationAndEmployment": {
+      "levelOfEducation": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Government",
+      "duration": "9 years",
+      "officeEmail": "n.okwu@ministry.gov.ng",
+      "monthlyIncome": ["₦350,000.00", "₦500,000.00"],
+      "loanRepayment": "₦80,000"
+    },
+    "socials": {
+      "twitter": "@ngozi_civil",
+      "facebook": "Ngozi Okwu",
+      "instagram": "@ngozi_ok"
+    },
+    "guarantors": [
+      {
+        "fullName": "Chidi Okwu",
+        "phoneNumber": "07067890123",
+        "email": "chidi@gmail.com",
+        "relationship": "Spouse"
+      },
+      {
+        "fullName": "Patience Eze",
+        "phoneNumber": "08156789012",
+        "email": "patience@yahoo.com",
+        "relationship": "Colleague"
+      }
+    ]
+  }
+]
