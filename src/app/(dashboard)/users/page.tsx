@@ -5,7 +5,7 @@ import Image from "next/image";
 import FilterModal, { FilterValues } from "@/components/ui/FilterModal";
 import UserMenuModal from '@/components/ui/UserMenuModal';
 import { useRouter } from "next/navigation";
-import type { User, PersonalInfo, EducationEmployment, Socials, Guarantor, UserStatus } from '@/lib/types';
+import type { User, PersonalInfo, EducationAndEmployment, Socials, Guarantor, UserStatus } from '@/lib/types';
 import usersMockData from "@/data/clients_mock.json"; // Import mock data
 
 const STATUS_COLORS: Record<string, string> = {
@@ -59,7 +59,30 @@ export default function UsersPage() {
   const [filterAnchor, setFilterAnchor] = useState<{ left: number; top: number } | null>(null);
   const [menuAnchor, setMenuAnchor] = useState<{ left: number; top: number } | null>(null);
   const [menuUser, setMenuUser] = useState<User | null>(null);
+  const [rawUsers, setRawUsers] = useState<User[]>([]);
   const router = useRouter();
+
+  // Initialize localStorage with mock data
+  const initializeLocalStorage = () => {
+    try {
+      const storedUsers = localStorage.getItem('allUsersData');
+      if (!storedUsers) {
+        // Add accountBalance to each user if it doesn't exist
+        const usersWithBalance = usersMockData.map(user => ({
+          ...user,
+          accountBalance: user.accountBalance || "₦0"
+        }));
+        localStorage.setItem('allUsersData', JSON.stringify(usersWithBalance));
+        console.log("Mock user data loaded into Local Storage.");
+        return usersWithBalance;
+      }
+      console.log("Mock user data already exists in Local Storage.");
+      return JSON.parse(storedUsers);
+    } catch (error) {
+      console.error("Error initializing Local Storage:", error);
+      return [];
+    }
+  };
 
   // Refs for each header cell
   const headerRefs = {
@@ -76,18 +99,8 @@ export default function UsersPage() {
 
   // Effect to load data into Local Storage on initial mount
   useEffect(() => {
-    try {
-      // Check if data is already in Local Storage to avoid overwriting if intended
-      const storedUsers = localStorage.getItem('allUsersData');
-      if (!storedUsers) {
-        localStorage.setItem('allUsersData', JSON.stringify(usersMockData));
-        console.log("Mock user data loaded into Local Storage.");
-      } else {
-        console.log("Mock user data already exists in Local Storage.");
-      }
-    } catch (error) {
-      console.error("Error saving mock user data to Local Storage:", error);
-    }
+    const initialData = initializeLocalStorage();
+    setRawUsers(initialData);
   }, []); // Empty dependency array means this effect runs only once on mount
 
   // Existing effect to fetch paginated and filtered data
@@ -112,13 +125,78 @@ export default function UsersPage() {
       .finally(() => setLoading(false));
   }, [page, filterValues]);
 
-  
-  const stats = [
-    { label: "USERS", value: total, icon: "/pink-users.svg" , bg:"#DF18FF33"},
-    { label: "ACTIVE USERS", value: total, icon: "/purple-users.svg", bg: "#5718FF33" },
-    { label: "USERS WITH LOANS", value: Math.floor(total / 4), icon: "/loan-orange.svg", bg: "#F55F4433" },
-    { label: "USERS WITH SAVINGS", value: Math.floor(total * 8.2), icon: "/coins-colored.svg", bg: "#FF336633" },
-  ];
+  // Function to fetch unfiltered data from Local Storage and call it
+  const fetchUnfilteredData = () => {
+    const storedUsers = localStorage.getItem('allUsersData');
+    if (storedUsers) {
+      setRawUsers(JSON.parse(storedUsers));
+    }
+  };
+
+  // Calculate user statistics
+  const calculateUserStats = (users: User[]) => {
+    // Helper function to parse currency string to number
+    const parseCurrency = (value: string): number => {
+      const numericValue = parseFloat(value.replace(/[\u20a6,]/g, ''));
+      return isNaN(numericValue) ? 0 : numericValue;
+    };
+
+    // Get users with loans
+    const getUsersWithLoans = (users: User[]): number => {
+      return users.filter(user => 
+        user.educationAndEmployment?.loanRepayment !== undefined && 
+        user.educationAndEmployment?.loanRepayment !== null
+      ).length;
+    };
+
+    // Get users with savings
+    const getUsersWithSavings = (users: User[]): number => {
+      return users.filter(user => {
+        if (!user.accountBalance) return false;
+        const balance = parseCurrency(user.accountBalance);
+        return balance > 0;
+      }).length;
+    };
+
+    // Get active users
+    const getActiveUsers = (users: User[]): number => {
+      return users.filter(user => user.status === "Active").length;
+    };
+
+    return [
+      { 
+        label: "USERS", 
+        value: users.length, 
+        icon: "/pink-users.svg", 
+        bg: "#DF18FF33"
+      },
+      { 
+        label: "ACTIVE USERS", 
+        value: getActiveUsers(users), 
+        icon: "/purple-users.svg", 
+        bg: "#5718FF33" 
+      },
+      { 
+        label: "USERS WITH LOANS", 
+        value: getUsersWithLoans(users), 
+        icon: "/loan-orange.svg", 
+        bg: "#F55F4433" 
+      },
+      { 
+        label: "USERS WITH SAVINGS", 
+        value: getUsersWithSavings(users), 
+        icon: "/coins-colored.svg", 
+        bg: "#FF336633" 
+      },
+    ];
+  };
+
+  //call the function
+  useEffect(() => {
+    fetchUnfilteredData();
+  }, []);
+
+  const stats = calculateUserStats(rawUsers);
 
   const totalPages = Math.ceil(total / PAGE_SIZE);
 
@@ -400,8 +478,9 @@ export default function UsersPage() {
                           phoneNumber: user.phoneNumber,
                           dateJoined: user.dateJoined,
                           status: user.status as UserStatus,
+                          accountBalance: user.accountBalance || "₦0",
                           personalInfo: {} as PersonalInfo,
-                          educationEmployment: {} as EducationEmployment,
+                          educationAndEmployment: {} as EducationAndEmployment,
                           socials: {} as Socials,
                           guarantor: {} as Guarantor,
                         });

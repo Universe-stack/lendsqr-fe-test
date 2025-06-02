@@ -1,16 +1,39 @@
 export interface PersonalInfo {
-  // Add fields as per Figma
+  fullName: string;
+  phoneNumber: string;
+  emailAddress: string;
+  bvn: string;
+  gender: string;
+  maritalStatus: string;
+  children: string;
+  typeOfResidence: string;
 }
-export interface EducationEmployment {
-  // Add fields as per Figma
+
+export interface EducationAndEmployment {
+  levelOfEducation: string;
+  employmentStatus: string;
+  sector: string;
+  duration: string;
+  officeEmail: string;
+  monthlyIncome: string[];
+  loanRepayment: string;
 }
+
 export interface Socials {
-  // Add fields as per Figma
+  twitter: string;
+  facebook: string;
+  instagram: string;
 }
+
 export interface Guarantor {
-  // Add fields as per Figma
+  fullName: string;
+  phoneNumber: string;
+  emailAddress: string;
+  relationship: string;
 }
+
 export type UserStatus = 'Active' | 'Inactive' | 'Pending' | 'Blacklisted';
+
 export interface User {
   userId: string;
   organization: string;
@@ -19,9 +42,9 @@ export interface User {
   phoneNumber: string;
   dateJoined: string;
   status: UserStatus;
+  accountBalance: string;
   personalInfo: PersonalInfo;
-  educationEmployment: EducationEmployment;
+  educationAndEmployment: EducationAndEmployment;
   socials: Socials;
   guarantor: Guarantor;
-  // ...additional fields
 } 
