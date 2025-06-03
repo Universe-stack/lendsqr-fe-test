@@ -11,7 +11,7 @@
 A sophisticated user management dashboard built with Next.js, React, TypeScript, and Sass. This assessment implements a pixel-perfect design from Figma specifications, featuring an authentication system, user management, and responsive dashboard.
 
 **Live Demo:** [View Application](https://justice-chinedu-onyekachi-lendsqr-fe-test.vercel.app/users)  
-**Repository:** [GitHub](https://github.com/yourusername/lendsqr-fe-test)
+**Repository:** [GitHub](https://github.com/Universe-stack/lendsqr-fe-test)
 
 ## 🚀 Quick Start
 
@@ -25,7 +25,7 @@ A sophisticated user management dashboard built with Next.js, React, TypeScript,
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/lendsqr-fe-test.git
+git clone https://github.com/Universe-stack/lendsqr-fe-test.git
 cd lendsqr-fe-test
 
 # Install dependencies
@@ -145,9 +145,9 @@ npm run test:watch
 
 ## 📞 Contact
 
-- **Name:** Your Name
-- **GitHub:** [@yourusername](https://github.com/yourusername)
-- **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/yourusername)
+- **Name:** Justice Chinedu Onyekachi
+- **GitHub:** [@yourusername](https://github.com/Universe-stack)
+- **LinkedIn:** [Your LinkedIn](https://www.linkedin.com/in/justice-kachi)
 
 ---
 
