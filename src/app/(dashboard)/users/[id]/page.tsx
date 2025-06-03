@@ -61,30 +61,36 @@ const UserDetailsPage = () => {
 
   useEffect(() => {
     setLoading(true);
-    // Attempt to retrieve user data from Local Storage
-    const storedUsers = localStorage.getItem('allUsersData');
     let foundUser: User | null = null;
 
-    if (storedUsers) {
+    // Add a small delay to ensure loading state is visible
+    const loadData = async () => {
       try {
-        const users: User[] = JSON.parse(storedUsers);
-        foundUser = users.find((user) => user.userId === userId) || null;
+        // Attempt to retrieve user data from Local Storage
+        const storedUsers = localStorage.getItem('allUsersData');
+        if (storedUsers) {
+          const users: User[] = JSON.parse(storedUsers);
+          foundUser = users.find((user) => user.userId === userId) || null;
+        }
       } catch (error) {
-        console.error("Error parsing user data from Local Storage:", error);
-        // If parsing fails, fall back to reading the JSON file
-        console.warn("Falling back to reading clients_mock.json due to Local Storage error.");
+        console.error("Error accessing Local Storage:", error);
+        // If localStorage fails, fall back to mock data
         foundUser = usersData.find((user) => user.userId === userId) || null;
       }
-    }
 
-    // If user not found in Local Storage (or Local Storage was empty/errored), read from the JSON file
-    if (!foundUser) {
-      console.warn("User not found in Local Storage or Local Storage empty. Reading from clients_mock.json.");
-      foundUser = usersData.find((user) => user.userId === userId) || null;
-    }
+      // If user not found in Local Storage (or Local Storage was empty/errored), read from the JSON file
+      if (!foundUser) {
+        foundUser = usersData.find((user) => user.userId === userId) || null;
+      }
 
-    setUser(foundUser);
-    setLoading(false);
+      // Add a small delay to ensure loading state is visible
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      setUser(foundUser);
+      setLoading(false);
+    };
+
+    loadData();
   }, [userId]); // Re-run effect if userId changes
 
   if (loading) {
@@ -119,7 +125,7 @@ const UserDetailsPage = () => {
       </div>
 
       <div className={styles.userInfoCard}>
-        <div className={styles.userHeader}>
+        <div className={styles.userHeader} data-testid="user-header">
           <div className={styles.avatar}>
             <Image 
               src="/np-user-avatar.svg" 
@@ -207,7 +213,7 @@ const UserDetailsPage = () => {
             <h3 style={{marginTop:'30px'}} >Guarantors</h3>
             <div className={styles.guarantorsList}>
               {user.guarantors.map((guarantor, index) => (
-                <div key={index} className={styles.guarantorItem}>
+                <div key={index} className={styles.guarantorItem} data-testid={`guarantor-${index}`}>
                   <div className={styles.infoItem}><span>FULL NAME</span> {guarantor.fullName}</div>
                   <div className={styles.infoItem}><span>PHONE NUMBER</span> {guarantor.phoneNumber}</div>
                   <div className={styles.infoItem}><span>EMAIL</span> {guarantor.email}</div>
