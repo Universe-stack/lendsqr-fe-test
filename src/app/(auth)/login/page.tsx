@@ -10,10 +10,12 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setIsLoading(true);
 
     // Check credentials
     if (email === 'admin@gmail.com' && password === 'admin') {
@@ -22,6 +24,7 @@ export default function LoginPage() {
       router.push('/users');
     } else {
       setError('Invalid credentials');
+      setIsLoading(false);
     }
   };
 
@@ -83,7 +86,12 @@ export default function LoginPage() {
               {error && <p className={styles.errorHint} style={{fontSize:'12px'}}>Use: admin</p>}
             </div>
             <a href="#" className={styles.forgotPassword}>FORGOT PASSWORD?</a>
-            <button type="submit" className={styles.loginBtn}>LOG IN</button>
+            <button type="submit" className={styles.loginBtn} disabled={isLoading}>
+              LOG IN
+              {isLoading && (
+                <div className={styles.spinner} />
+              )}
+            </button>
           </form>
         </div>
       </div>
