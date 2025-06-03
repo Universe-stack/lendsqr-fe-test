@@ -76,8 +76,20 @@ export default function UsersPage() {
         console.log("Mock user data loaded into Local Storage.");
         return usersWithBalance;
       }
-      console.log("Mock user data already exists in Local Storage.");
-      return JSON.parse(storedUsers);
+      try {
+        const parsedUsers = JSON.parse(storedUsers);
+        console.log("Mock user data already exists in Local Storage.");
+        return Array.isArray(parsedUsers) ? parsedUsers : [];
+      } catch (parseError) {
+        console.error("Error parsing Local Storage data:", parseError);
+        // If parsing fails, return empty array and reinitialize with mock data
+        const usersWithBalance = usersMockData.map(user => ({
+          ...user,
+          accountBalance: user.accountBalance || "₦0"
+        }));
+        localStorage.setItem('allUsersData', JSON.stringify(usersWithBalance));
+        return usersWithBalance;
+      }
     } catch (error) {
       console.error("Error initializing Local Storage:", error);
       return [];
@@ -103,7 +115,7 @@ export default function UsersPage() {
     setRawUsers(initialData);
   }, []); // Empty dependency array means this effect runs only once on mount
 
-  // Existing effect to fetch paginated and filtered data
+  // Effect to fetch paginated and filtered data
   useEffect(() => {
     setLoading(true);
     const params = new URLSearchParams({
@@ -119,8 +131,13 @@ export default function UsersPage() {
     fetch(`/api/users?${params.toString()}`)
       .then((res) => res.json())
       .then((data) => {
-        setUsers(data.users);
-        setTotal(data.total);
+        setUsers(data.users || []);
+        setTotal(data.total || 0);
+      })
+      .catch((error) => {
+        console.error("Error fetching users:", error);
+        setUsers([]);
+        setTotal(0);
       })
       .finally(() => setLoading(false));
   }, [page, filterValues]);
@@ -191,7 +208,7 @@ export default function UsersPage() {
     ];
   };
 
-  //call the function
+  //call the function to fetch unnpaginated data
   useEffect(() => {
     fetchUnfilteredData();
   }, []);
@@ -213,11 +230,7 @@ export default function UsersPage() {
                 width={16} 
                 height={16} 
                 quality={100}
-                style={{
-                  objectFit: 'cover',
-                  width: '100%',
-                  height: '100%',
-                }}
+
               />
             </span>
             <span className={styles.statLabel}>{stat.label}</span>
@@ -225,7 +238,7 @@ export default function UsersPage() {
           </div>
         ))}
       </div>
-      <div className={styles.tableContainer} style={{ position: 'relative' }}>
+      <div className={styles.tableContainer}>
         {filterModalOpen && filterAnchor && (
           <FilterModal
             isOpen={filterModalOpen}

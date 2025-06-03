@@ -22,12 +22,12 @@ export async function GET(request: Request) {
   const status = searchParams.get('status') || '';
 
   users = users.filter((user: User) => {
-    if (organization && user.organization !== organization) return false;
+    if (organization && !user.organization.toLowerCase().includes(organization.toLowerCase())) return false;
     if (username && !user.username.toLowerCase().includes(username.toLowerCase())) return false;
     if (email && !user.email.toLowerCase().includes(email.toLowerCase())) return false;
     if (date && !user.dateJoined.startsWith(date)) return false;
     if (phoneNumber && !user.phoneNumber.includes(phoneNumber)) return false;
-    if (status && user.status !== status) return false;
+    if (status && user.status.toLowerCase() !== status.toLowerCase()) return false;
     return true;
   });
 

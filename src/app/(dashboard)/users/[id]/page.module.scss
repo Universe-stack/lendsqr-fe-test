@@ -244,4 +244,169 @@
 
 .notFound {
   padding: 32px;
+}
+
+// Tablet styles (max-width: 1024px)
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    .buttonGroup {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+
+      button {
+        flex: 1;
+        margin-right: 0;
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .userInfoCard {
+    padding: 20px 20px 0 20px;
+
+    .userHeader {
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+
+      .avatar {
+        width: 80px;
+        height: 80px;
+      }
+
+      .userDetails {
+        margin-right: 0;
+      }
+
+      .tierInfo {
+        height: auto;
+        margin: 0;
+        padding: 15px;
+        border: none;
+        border-top: 1px solid #545F7D33;
+        border-bottom: 1px solid #545F7D33;
+        width: 100%;
+      }
+
+      .accountInfo {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .tabs {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 10px;
+
+      button {
+        width: auto;
+        min-width: 150px;
+      }
+    }
+  }
+
+  .tabContent {
+    padding: 20px;
+
+    .section {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .socialsGrid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .guarantorsList {
+        .guarantorItem {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+        }
+      }
+    }
+  }
+}
+
+// Mobile styles (max-width: 768px)
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .backLink {
+    margin-bottom: 20px;
+  }
+
+  .header {
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  .userInfoCard {
+    .userHeader {
+      align-items: center;
+      justify-content: center;
+      .avatar {
+        width: 60px;
+        height: 60px;
+      }
+
+      .userDetails {
+        align-items: center;
+        h2 {
+          font-size: 18px;
+        }
+      }
+
+      .accountInfo {
+        
+        h2 {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .tabs {
+      button {
+        min-width: 120px;
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+    }
+  }
+
+  .tabContent {
+    .section {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .socialsGrid {
+        grid-template-columns: 1fr;
+      }
+
+      .guarantorsList {
+        .guarantorItem {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .infoItem {
+        font-size: 14px;
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 } 

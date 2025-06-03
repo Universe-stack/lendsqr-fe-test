@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Sidebar.module.scss';
@@ -33,7 +33,7 @@ const navSections = [
       { label: 'Services', href: '/services', icon: '/galaxy.png' },
       { label: 'Service Account', href: '/service-account', icon: '/user-cog.png' },
       { label: 'Settlements', href: '/settlements', icon: '/scroll.png' },
-      { label: 'Reports', href: '/reports', icon: '/chat-bar.png' },
+      { label: 'Reports', href: '/report', icon: '/chart-bar.svg' }
     ],
   },
   {
@@ -48,6 +48,12 @@ const navSections = [
 ];
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const [isSearchExpanded, setIsSearchExpanded] = useState(false);
+
+  const handleSearchClick = () => {
+    setIsSearchExpanded(!isSearchExpanded);
+  };
+
   return (
     <>
       <div className={`${styles.overlay} ${isOpen ? styles.open : ''}`} onClick={onClose} />
@@ -57,9 +63,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <input
               type="text"
               placeholder="Search for anything"
-              className={styles.searchInput}
+              className={`${styles.searchInput} ${isSearchExpanded ? styles.expanded : ''}`}
             />
-            <div className={styles.searchButton}>
+            <div className={styles.searchButton} onClick={handleSearchClick}>
               <Image 
                 src="/search.png" 
                 alt="Search Icon" 
@@ -153,7 +159,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 </span>
                 <span className={styles.linkText}>Logout</span>
               </Link>
-          </div>
+        </div>
+
+        <div className={styles.sectionTitle} style={{fontSize:'12px', marginTop:'40px', display:'flex', justifyContent:'flex-start', alignItems:'center', color:'#213F7D', fontWeight:'400'}}>
+          v1.2.0
+        </div>
       </aside>
     </>
   );

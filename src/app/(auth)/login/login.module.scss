@@ -19,8 +19,14 @@
   justify-content: flex-start;
   background: #ffffff;
   padding-left: 4.1875rem;
+  
+  @include tablet {
+    padding-left: 2rem;
+  }
+
   @include mobile {
     padding: 1rem;
+    min-height: 40vh;
   }
 }
 
@@ -31,6 +37,15 @@
   padding-left: 1.875rem;
   padding-top: 6.5625rem;
   align-items: center;
+
+  @include tablet {
+    padding-top: 3rem;
+  }
+
+  @include mobile {
+    padding: 1rem 0;
+    justify-content: center;
+  }
 }
 
 .illustrationWrapper {
@@ -39,6 +54,26 @@
   justify-content: center;
   align-items: center;
   padding-top: 8.6875rem;
+
+  @include tablet {
+    padding-top: 4rem;
+  }
+
+  @include mobile {
+    padding-top: 2rem;
+  }
+
+  img {
+    @include tablet {
+      width: 80%;
+      height: auto;
+    }
+
+    @include mobile {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .rightSection {
@@ -49,7 +84,11 @@
   background: #fff;
   box-shadow: 0 0.9375rem 5.625rem rgba(0, 0, 0, 0.03);
   border-left: 0.125rem solid rgba(84, 95, 125, 0.05);
+
   @include mobile {
+    border-left: none;
+    border-top: 0.125rem solid rgba(84, 95, 125, 0.05);
+    min-height: 60vh;
   }
 }
 
@@ -58,6 +97,19 @@
   margin-top: 13.75rem;
   width: 100%;
   max-width: 27.9375rem;
+
+  @include tablet {
+    margin-left: 3rem;
+    margin-top: 8rem;
+    max-width: 24rem;
+  }
+
+  @include mobile {
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    max-width: 100%;
+  }
+
   h1 {
     color: $text-dark;
     font-size: 2.5rem;
@@ -66,12 +118,33 @@
     line-height: 100%;
     letter-spacing: -4%;
     font-family: $font-family;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+
+    @include mobile {
+      font-size: 1.75rem;
+      text-align: center;
+    }
   }
+
   p {
     color: $text-medium;
     margin-bottom: 3.75rem;
     font-size: 1.25rem;
     font-family: $font-family;
+
+    @include tablet {
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @include mobile {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
   }
 }
 
@@ -85,14 +158,27 @@
   background-color: transparent !important;
   font-size: 0.875rem;
   font-family: $font-family;
+  transition: border-color 0.3s ease;
+
+  @include mobile {
+    height: 2.75rem;
+    font-size: 0.8125rem;
+  }
+
   &:focus {
     outline: none;
     border-color: $primary-teal;
+  }
+
+  &.error {
+    border-color: #E4033B;
   }
 }
 
 .passwordWrapper {
   position: relative;
+  margin-bottom: 1rem;
+
   .showBtn {
     position: absolute;
     right: 1rem;
@@ -105,6 +191,10 @@
     cursor: pointer;
     font-size: 0.75rem;
     padding: 0;
+
+    @include mobile {
+      font-size: 0.7rem;
+    }
   }
 }
 
@@ -116,6 +206,12 @@
   margin-bottom: 1.875rem;
   text-align: right;
   text-decoration: none;
+
+  @include mobile {
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+
   &:hover {
     text-decoration: underline;
   }
@@ -135,7 +231,26 @@
   cursor: pointer;
   transition: background 0.2s;
   font-family: $font-family;
+
+  @include mobile {
+    height: 2.75rem;
+    font-size: 0.9375rem;
+  }
+
   &:hover {
     background: darken($primary-teal, 10%);
+  }
+}
+
+.errorHint {
+  color: #E4033B;
+  font-size: 8px;
+  margin: -1rem 0 1rem 0;
+  text-align: right;
+  font-family: $font-family;
+
+  @include mobile {
+    font-size: 7px;
+    margin: -0.75rem 0 0.75rem 0;
   }
 } 

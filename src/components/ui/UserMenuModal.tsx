@@ -27,7 +27,7 @@ const UserMenuModal: React.FC<UserMenuModalProps> = ({ user, anchor, onClose, on
     <div
       ref={ref}
       className={styles.userMenuModal}
-      style={{ left: anchor.left, top: anchor.top }}
+      style={{ left: anchor.left, top: anchor.top , zIndex:'50px'}}
     >
       <button
         className={styles.userMenuItem}
