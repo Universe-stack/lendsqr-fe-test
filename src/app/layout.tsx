@@ -9,8 +9,11 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Lendsqr Admin",
-  description: "Lendsqr Admin Dashboard",
+  title: "Lendsqr Assessment",
+  description: "Lendsqr Assessment Dashboard",
+  icons: {
+    icon: '/lendsqr-logo.svg',
+  },
 };
 
 export default function RootLayout({
@@ -20,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/lendsqr-logo.svg" />
+      </head>
       <body className={workSans.variable}>
         {children}
       </body>
