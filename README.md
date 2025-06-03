@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lendsqr Frontend Engineer Assessment
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.2-black)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.0.0-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-blue)](https://www.typescriptlang.org/)
+[![Sass](https://img.shields.io/badge/Sass-1.89.0-pink)](https://sass-lang.com/)
+[![Jest](https://img.shields.io/badge/Jest-29.7.0-red)](https://jestjs.io/)
 
-First, run the development server:
+## 🎯 Project Overview
+
+A sophisticated user management dashboard built with Next.js, React, TypeScript, and Sass. This assessment implements a pixel-perfect design from Figma specifications, featuring an authentication system, user management, and responsive dashboard.
+
+**Live Demo:** [View Application](https://justice-chinedu-onyekachi-lendsqr-fe-test.vercel.app/users)  
+**Repository:** [GitHub](https://github.com/yourusername/lendsqr-fe-test)
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js (v16.0.0 or higher)
+- npm (v8.0.0 or higher)
+- Modern web browser
+
+### Installation
 
 ```bash
+# Clone repository
+git clone https://github.com/yourusername/lendsqr-fe-test.git
+cd lendsqr-fe-test
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Local Development URL:** `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Implemented Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Authentication System
 
-## Learn More
+- Basic login form with email/password validation
+- Local storage for authentication state
+- Route protection with Next.js middleware
+- Demo credentials (admin@gmail.com/admin)
 
-To learn more about Next.js, take a look at the following resources:
+### Dashboard
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- User statistics and metrics
+- Interactive data visualization
+- Responsive grid layout
+- Real-time data updates
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### User Management
 
-## Deploy on Vercel
+- User listing with pagination
+- Advanced filtering and search
+- Detailed user profiles
+- User status management
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Technical Implementation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js App Router architecture
+- TypeScript for type safety
+- Sass modules for styling
+- React Icons integration
+- Date handling with react-datepicker
+
+## 🏗️ Project Structure
+
+```
+src/
+├── app/              # Next.js app router pages
+│   ├── (auth)/      # Authentication routes
+│   ├── (dashboard)/ # Dashboard routes
+│   └── api/         # API routes
+├── components/       # Reusable components
+├── data/            # Mock data and constants
+├── hooks/           # Custom React hooks
+├── lib/             # Utility functions
+├── styles/          # Global styles
+└── middleware.ts    # Next.js middleware
+```
+
+## 💻 Technical Stack
+
+### Core Technologies
+
+- Next.js 15.3.2
+- React 19.0.0
+- TypeScript 5.0.0
+- Sass 1.89.0
+
+### Development Tools
+
+- ESLint for code linting
+- Jest for testing
+- React Testing Library
+- TypeScript for type checking
+
+## 🧪 Testing
+
+### Test Setup
+
+```bash
+# Run tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+```
+
+### Testing Tools
+
+- Jest for test runner
+- React Testing Library for component testing
+- Jest DOM for DOM testing utilities
+- User Event for interaction testing
+
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Responsive breakpoints
+- Flexible grid system
+- Adaptive components
+- Touch-friendly interfaces
+
+## 🎨 Design Implementation
+
+- Pixel-perfect Figma implementation
+- Consistent color scheme
+- Typography system
+- Component-based design
+- Responsive layouts
+
+## 🚀 Development Workflow
+
+1. Feature branch creation
+2. Development
+3. Testing
+4. Code review
+5. Deployment
+
+## 📞 Contact
+
+- **Name:** Your Name
+- **GitHub:** [@yourusername](https://github.com/yourusername)
+- **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/yourusername)
+
+---
+
+Built with ❤️ for Lendsqr Frontend Engineer Assessment
