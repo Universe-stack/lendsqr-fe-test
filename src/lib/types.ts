@@ -9,6 +9,11 @@ export interface PersonalInfo {
   typeOfResidence: string;
 }
 
+export interface BankDetails {
+  bankName: string;
+  accountNumber: string;
+}
+
 export interface EducationAndEmployment {
   levelOfEducation: string;
   employmentStatus: string;
@@ -28,7 +33,7 @@ export interface Socials {
 export interface Guarantor {
   fullName: string;
   phoneNumber: string;
-  emailAddress: string;
+  email: string;
   relationship: string;
 }
 
@@ -36,15 +41,22 @@ export type UserStatus = 'Active' | 'Inactive' | 'Pending' | 'Blacklisted';
 
 export interface User {
   userId: string;
+  fullName: string;
   organization: string;
+  status: string;
   username: string;
   email: string;
   phoneNumber: string;
-  dateJoined: string;
-  status: UserStatus;
+  bvn: string;
+  gender: string;
+  maritalStatus: string;
+  children: string;
+  residenceType: string;
+  tier: string;
   accountBalance: string;
-  personalInfo: PersonalInfo;
+  dateJoined: string;
+  bankDetails: BankDetails;
   educationAndEmployment: EducationAndEmployment;
   socials: Socials;
-  guarantor: Guarantor;
+  guarantors: Guarantor[];
 } 

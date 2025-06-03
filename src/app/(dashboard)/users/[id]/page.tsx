@@ -6,49 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.scss';
 import { FaStar, FaRegStar } from 'react-icons/fa';
-
-// Define a type for the user data to ensure type safety
-interface User {
-  userId: string;
-  fullName: string;
-  organization: string;
-  status: string;
-  username: string;
-  email: string;
-  phoneNumber: string;
-  bvn: string;
-  gender: string;
-  maritalStatus: string;
-  children: string;
-  residenceType: string;
-  tier: string;
-  accountBalance: string;
-  dateJoined: string;
-  bankDetails: {
-    bankName: string;
-    accountNumber: string;
-  };
-  educationAndEmployment: {
-    levelOfEducation: string;
-    employmentStatus: string;
-    sector: string;
-    duration: string;
-    officeEmail: string;
-    monthlyIncome: string[];
-    loanRepayment: string;
-  };
-  socials: {
-    twitter: string;
-    facebook: string;
-    instagram: string;
-  };
-  guarantors: {
-    fullName: string;
-    phoneNumber: string;
-    email: string;
-    relationship: string;
-  }[];
-}
+import { User } from '@/lib/types';
 
 const UserDetailsPage = () => {
   const params = useParams();

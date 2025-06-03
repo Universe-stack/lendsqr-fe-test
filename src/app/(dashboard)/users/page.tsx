@@ -5,7 +5,7 @@ import Image from "next/image";
 import FilterModal, { FilterValues } from "@/components/ui/FilterModal";
 import UserMenuModal from '@/components/ui/UserMenuModal';
 import { useRouter } from "next/navigation";
-import type { User, PersonalInfo, EducationAndEmployment, Socials, Guarantor, UserStatus } from '@/lib/types';
+import type { User, UserStatus } from '@/lib/types';
 import usersMockData from "@/data/clients_mock.json"; // Import mock data
 
 const STATUS_COLORS: Record<string, string> = {
@@ -508,10 +508,17 @@ export default function UsersPage() {
                           dateJoined: user.dateJoined,
                           status: user.status as UserStatus,
                           accountBalance: user.accountBalance || "₦0",
-                          personalInfo: {} as PersonalInfo,
-                          educationAndEmployment: {} as EducationAndEmployment,
-                          socials: {} as Socials,
-                          guarantor: {} as Guarantor,
+                          fullName: user.fullName,
+                          bvn: user.bvn,
+                          gender: user.gender,
+                          maritalStatus: user.maritalStatus,
+                          children: user.children,
+                          residenceType: user.residenceType,
+                          tier: user.tier,
+                          bankDetails: user.bankDetails,
+                          educationAndEmployment: user.educationAndEmployment,
+                          socials: user.socials,
+                          guarantors: user.guarantors
                         });
                       }}
                       style={{ cursor: 'pointer' }}
