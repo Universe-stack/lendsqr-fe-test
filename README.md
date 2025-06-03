@@ -146,8 +146,8 @@ npm run test:watch
 ## 📞 Contact
 
 - **Name:** Justice Chinedu Onyekachi
-- **GitHub:** [@yourusername](https://github.com/Universe-stack)
-- **LinkedIn:** [Your LinkedIn](https://www.linkedin.com/in/justice-kachi)
+- **GitHub:** [@username](https://github.com/Universe-stack)
+- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/justice-kachi)
 
 ---
 
