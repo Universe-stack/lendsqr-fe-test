@@ -94,7 +94,9 @@ const UserDetailsPage = () => {
   }, [userId]); // Re-run effect if userId changes
 
   if (loading) {
-    return <div className={styles.loading}>Loading user details...</div>;
+    return (<div className={styles.loadingOverlay}>
+    <div className={styles.spinner} />
+  </div>)
   }
 
   if (!user) {
