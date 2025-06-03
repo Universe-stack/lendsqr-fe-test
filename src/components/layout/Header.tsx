@@ -46,7 +46,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
         <a href="#" className={styles.docsLink}>Docs</a>
         <span className={styles.notificationIcon}>
           <Image
-            src="/vector.png"
+            src="/notification-bell.svg"
             alt="avatar"
             width={48}
             height={48}
