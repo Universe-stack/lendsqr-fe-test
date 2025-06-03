@@ -4,7 +4,7 @@
 .loginContainer {
   display: flex;
   min-height: 100vh;
-  background: #fff;
+  background: $white;
 
   @include mobile {
     flex-direction: column;
@@ -17,15 +17,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: #ffffff;
+  background: $white;
   padding-left: 4.1875rem;
   
   @include tablet {
-    padding-left: 2rem;
+    padding-left: $spacing-xl;
   }
 
   @include mobile {
-    padding: 1rem;
+    padding: $spacing-md;
     min-height: 40vh;
   }
 }
@@ -39,11 +39,11 @@
   align-items: center;
 
   @include tablet {
-    padding-top: 3rem;
+    padding-top: $spacing-xxl;
   }
 
   @include mobile {
-    padding: 1rem 0;
+    padding: $spacing-md 0;
     justify-content: center;
   }
 }
@@ -56,11 +56,11 @@
   padding-top: 8.6875rem;
 
   @include tablet {
-    padding-top: 4rem;
+    padding-top: $spacing-xxl;
   }
 
   @include mobile {
-    padding-top: 2rem;
+    padding-top: $spacing-xl;
   }
 
   img {
@@ -81,13 +81,13 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  background: #fff;
-  box-shadow: 0 0.9375rem 5.625rem rgba(0, 0, 0, 0.03);
-  border-left: 0.125rem solid rgba(84, 95, 125, 0.05);
+  background: $white;
+  box-shadow: $shadow-sm;
+  border-left: 0.125rem solid $border-medium;
 
   @include mobile {
     border-left: none;
-    border-top: 0.125rem solid rgba(84, 95, 125, 0.05);
+    border-top: 0.125rem solid $border-medium;
     min-height: 60vh;
   }
 }
@@ -99,32 +99,32 @@
   max-width: 27.9375rem;
 
   @include tablet {
-    margin-left: 3rem;
+    margin-left: $spacing-xxl;
     margin-top: 8rem;
     max-width: 24rem;
   }
 
   @include mobile {
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+    margin: $spacing-xl auto;
+    padding: 0 $spacing-lg;
     max-width: 100%;
   }
 
   h1 {
     color: $text-dark;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.625rem;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-sm;
     line-height: 100%;
     letter-spacing: -4%;
     font-family: $font-family;
 
     @include tablet {
-      font-size: 2rem;
+      font-size: $font-size-lg;
     }
 
     @include mobile {
-      font-size: 1.75rem;
+      font-size: $font-size-md;
       text-align: center;
     }
   }
@@ -132,17 +132,17 @@
   p {
     color: $text-medium;
     margin-bottom: 3.75rem;
-    font-size: 1.25rem;
+    font-size: $font-size-lg;
     font-family: $font-family;
 
     @include tablet {
-      font-size: 1.1rem;
+      font-size: $font-size-md;
       margin-bottom: 2.5rem;
     }
 
     @include mobile {
-      font-size: 1rem;
-      margin-bottom: 2rem;
+      font-size: $font-size-sm;
+      margin-bottom: $spacing-xl;
       text-align: center;
     }
   }
@@ -151,18 +151,18 @@
 .input {
   width: 100%;
   height: 3.125rem;
-  padding: 1rem 1.09375rem;
-  margin-bottom: 1.5rem;
-  border: 0.0625rem solid #545F7D26;
-  border-radius: 0.3125rem;
+  padding: $spacing-md $spacing-lg;
+  margin-bottom: $spacing-lg;
+  border: 0.0625rem solid $border-light;
+  border-radius: $border-radius-sm;
   background-color: transparent !important;
-  font-size: 0.875rem;
+  font-size: $font-size-sm;
   font-family: $font-family;
-  transition: border-color 0.3s ease;
+  transition: border-color $transition-slow;
 
   @include mobile {
     height: 2.75rem;
-    font-size: 0.8125rem;
+    font-size: $font-size-xs;
   }
 
   &:focus {
@@ -171,29 +171,29 @@
   }
 
   &.error {
-    border-color: #E4033B;
+    border-color: $status-red;
   }
 }
 
 .passwordWrapper {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: $spacing-md;
 
   .showBtn {
     position: absolute;
-    right: 1rem;
+    right: $spacing-md;
     top: 35%;
     transform: translateY(-50%);
     background: none;
     border: none;
     color: $primary-teal;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     cursor: pointer;
-    font-size: 0.75rem;
+    font-size: $font-size-xs;
     padding: 0;
 
     @include mobile {
-      font-size: 0.7rem;
+      font-size: $font-size-xs;
     }
   }
 }
@@ -201,15 +201,15 @@
 .forgotPassword {
   display: block;
   color: $primary-teal;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
   margin-bottom: 1.875rem;
   text-align: right;
   text-decoration: none;
 
   @include mobile {
-    font-size: 0.7rem;
-    margin-bottom: 1.5rem;
+    font-size: $font-size-xs;
+    margin-bottom: $spacing-lg;
   }
 
   &:hover {
@@ -220,21 +220,21 @@
 .loginBtn {
   width: 100%;
   background: $primary-teal;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
+  color: $white;
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: $border-radius-md;
   padding-top: 0.9375rem;
   padding-bottom: 0.8125rem;
   height: 3rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background $transition-default;
   font-family: $font-family;
 
   @include mobile {
     height: 2.75rem;
-    font-size: 0.9375rem;
+    font-size: $font-size-sm;
   }
 
   &:hover {
@@ -243,8 +243,8 @@
 }
 
 .errorHint {
-  color: #E4033B;
-  font-size: 8px;
+  color: $status-red;
+  font-size: $font-size-xs;
   margin: -1rem 0 1rem 0;
   text-align: right;
   font-family: $font-family;

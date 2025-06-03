@@ -144,9 +144,22 @@ export default function UsersPage() {
 
   // Function to fetch unfiltered data from Local Storage and call it
   const fetchUnfilteredData = () => {
-    const storedUsers = localStorage.getItem('allUsersData');
-    if (storedUsers) {
-      setRawUsers(JSON.parse(storedUsers));
+    try {
+      const storedUsers = localStorage.getItem('allUsersData');
+      if (storedUsers) {
+        try {
+          const parsedUsers = JSON.parse(storedUsers);
+          setRawUsers(Array.isArray(parsedUsers) ? parsedUsers : []);
+        } catch (parseError) {
+          console.error("Error parsing user data from Local Storage:", parseError);
+          setRawUsers([]);
+        }
+      } else {
+        setRawUsers([]);
+      }
+    } catch (error) {
+      console.error("Error accessing Local Storage:", error);
+      setRawUsers([]);
     }
   };
 
@@ -185,25 +198,29 @@ export default function UsersPage() {
         label: "USERS", 
         value: users.length, 
         icon: "/pink-users.svg", 
-        bg: "#DF18FF33"
+        bg: "#DF18FF33",
+        testId: "total-users"
       },
       { 
         label: "ACTIVE USERS", 
         value: getActiveUsers(users), 
         icon: "/purple-users.svg", 
-        bg: "#5718FF33" 
+        bg: "#5718FF33",
+        testId: "active-users"
       },
       { 
         label: "USERS WITH LOANS", 
         value: getUsersWithLoans(users), 
         icon: "/loan-orange.svg", 
-        bg: "#F55F4433" 
+        bg: "#F55F4433",
+        testId: "users-with-loans"
       },
       { 
         label: "USERS WITH SAVINGS", 
         value: getUsersWithSavings(users), 
         icon: "/coins-colored.svg", 
-        bg: "#FF336633" 
+        bg: "#FF336633",
+        testId: "users-with-savings"
       },
     ];
   };
@@ -222,7 +239,7 @@ export default function UsersPage() {
       <h1 className={styles.pageTitle}>Users</h1>
       <div className={styles.statsRow}>
         {stats.map((stat) => (
-          <div key={stat.label} className={styles.statCard}>
+          <div key={stat.label} className={styles.statCard} data-testid={stat.testId}>
             <span className={styles.statIcon} style={{ backgroundColor: `${stat.bg}` }}>
               <Image 
                 src={stat.icon} 
@@ -230,7 +247,6 @@ export default function UsersPage() {
                 width={16} 
                 height={16} 
                 quality={100}
-
               />
             </span>
             <span className={styles.statLabel}>{stat.label}</span>
@@ -271,8 +287,8 @@ export default function UsersPage() {
               left: filterAnchor.left,
               top: filterAnchor.top,
               zIndex: 10,
-
             }}
+            data-testid="filter-modal"
           />
         )}
         {loading && (
@@ -445,13 +461,13 @@ export default function UsersPage() {
               </tr>
             ) : users.length === 0 ? (
               <tr>
-                <td colSpan={7} style={{ textAlign: "center", padding: 32 }}>
+                <td colSpan={7} style={{ textAlign: "center", padding: 32 }} data-testid="no-users-message">
                   No users found.
                 </td>
               </tr>
             ) : (
               users.map((user) => (
-                <tr key={user.email} className={styles.tableRow}>
+                <tr key={user.email} className={styles.tableRow} data-testid={`user-row-${user.username}`}>
                   <td className={styles.tableCell}>{user.organization}</td>
                   <td className={styles.tableCell}>{user.username}</td>
                   <td className={styles.tableCell}>{user.email}</td>

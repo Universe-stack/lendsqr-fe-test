@@ -173,9 +173,9 @@ describe('UsersPage', () => {
       const filterIcon = screen.getAllByAltText('Dropdown icon')[0];
       fireEvent.click(filterIcon);
 
-      // Check if filter modal is opened
+      // Check if filter modal is opened by looking for the form
       await waitFor(() => {
-        expect(screen.getByText('Filter')).toBeInTheDocument();
+        expect(screen.getByRole('form')).toBeInTheDocument();
       });
     });
   });
@@ -190,12 +190,12 @@ describe('UsersPage', () => {
 
       render(<UsersPage />);
 
-      // Check if stats show zero values
+      // Check if stats show zero values using data-testid
       await waitFor(() => {
-        expect(screen.getByText('0')).toBeInTheDocument(); // Total users
-        expect(screen.getByText('0')).toBeInTheDocument(); // Active users
-        expect(screen.getByText('0')).toBeInTheDocument(); // Users with loans
-        expect(screen.getByText('0')).toBeInTheDocument(); // Users with savings
+        expect(screen.getByTestId('total-users')).toHaveTextContent('0');
+        expect(screen.getByTestId('active-users')).toHaveTextContent('0');
+        expect(screen.getByTestId('users-with-loans')).toHaveTextContent('0');
+        expect(screen.getByTestId('users-with-savings')).toHaveTextContent('0');
       });
     });
 
@@ -219,9 +219,9 @@ describe('UsersPage', () => {
 
       render(<UsersPage />);
 
-      // Check if stats show zero values
+      // Check if stats show zero values using data-testid
       await waitFor(() => {
-        expect(screen.getByText('0')).toBeInTheDocument(); // Total users
+        expect(screen.getByTestId('total-users')).toHaveTextContent('0');
       });
     });
 
@@ -248,12 +248,13 @@ describe('UsersPage', () => {
       await waitFor(() => {
         const filterInput = screen.getByPlaceholderText('Organization');
         userEvent.type(filterInput, 'NonExistentOrg');
-        const filterButton = screen.getByText('Filter');
+        const filterButton = screen.getByRole('button', { name: /filter/i });
         fireEvent.click(filterButton);
       });
 
-      // Check if table shows no results
+      // Check if table shows no results message
       await waitFor(() => {
+        expect(screen.getByText('No users found.')).toBeInTheDocument();
         expect(screen.queryByText('testuser')).not.toBeInTheDocument();
         expect(screen.queryByText('anotheruser')).not.toBeInTheDocument();
       });

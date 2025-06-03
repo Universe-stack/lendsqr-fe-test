@@ -20,6 +20,7 @@ interface FilterModalProps {
   organizations?: string[];
   className?: string;
   style?: CSSProperties;
+  'data-testid'?: string;
 }
 
 const statusOptions = [
@@ -55,6 +56,7 @@ export const FilterModal: React.FC<FilterModalProps> = ({
   organizations = [],
   className = '',
   style = {},
+  'data-testid': testId,
 }) => {
   const [values, setValues] = useState<FilterValues>(initialValues);
 
@@ -65,7 +67,7 @@ export const FilterModal: React.FC<FilterModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className={className} style={style}>
+    <div className={className} style={style} data-testid={testId}>
       <button onClick={onClose} style={{ position: 'absolute', top: 8, right: 8, border: 'none', background: 'none', fontSize: 18, cursor: 'pointer' }}>×</button>
       <form
         onSubmit={e => {

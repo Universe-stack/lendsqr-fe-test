@@ -1,11 +1,59 @@
+// Colors
 $primary-teal: #39CDCC;
 $text-dark: #213F7D;
 $text-medium: #545F7D;
+$white: #FFFFFF;
+
+// Status Colors
 $status-green: #39CD62;
 $status-yellow: #E9B200;
 $status-red: #E4033B;
 $status-gray: #545F7D;
+
+// Border Colors
+$border-light: rgba(33, 63, 125, 0.06);
+$border-medium: rgba(84, 95, 125, 0.05);
+$border-dark: rgba(33, 63, 125, 0.24);
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 20px;
+$spacing-xl: 24px;
+$spacing-xxl: 30px;
+$spacing-xxxl: 32px;
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 100px;
+
+// Breakpoints
 $mobile: 768px;
 $tablet: 1024px;
 $desktop: 1200px;
-$font-family: var(--font-work-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+
+// Typography
+$font-family: var(--font-work-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+// Font Sizes
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Shadows
+$shadow-sm: 3px 5px 20px rgba(0, 0, 0, 0.04);
+$shadow-md: 0 2px 16px rgba(0, 0, 0, 0.10);
+
+// Transitions
+$transition-default: 0.2s ease;
+$transition-slow: 0.3s ease; 

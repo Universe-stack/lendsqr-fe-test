@@ -1,13 +1,14 @@
+@import '../../../styles/variables.scss';
+
 .usersPage {
   position: relative;
   width: 100%;
-  paddingBottom: 20px ;
-  max-width: 1200px;
+  padding-bottom: $spacing-lg;
+  max-width: $desktop;
   margin: 0 auto;
 
-
-  @media (max-width: 768px) {
-    padding: 15px;
+  @media (max-width: $mobile) {
+    padding: $spacing-lg;
     max-width: 100%;
     margin: 0 auto;
     display: flex;
@@ -17,66 +18,66 @@
 }
 
 .pageTitle {
-  font-size: 24px;
-  margin-bottom: 40px;
-  font-weight: 500;
-  color: #213F7D;
+  font-size: $font-size-xl;
+  margin-bottom: $spacing-xxl;
+  font-weight: $font-weight-medium;
+  color: $text-dark;
 
-  @media (max-width: 768px) {
-    font-size: 20px;
-    margin-bottom: 20px;
+  @media (max-width: $mobile) {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-lg;
   }
 }
 
 .statsRow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-bottom: 32px;
+  gap: $spacing-md;
+  margin-bottom: $spacing-xxxl;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $tablet) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 16px;
+    gap: $spacing-md;
   }
 }
 
 .statCard {
-  background: #fff;
-  border-radius: 8px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  border: 1px solid #213F7D0F;
+  background: $white;
+  border-radius: $border-radius-md;
+  padding-top: $spacing-lg;
+  padding-bottom: $spacing-xxl;
+  padding-left: $spacing-xxl;
+  border: 1px solid $border-light;
   min-width: 180px;
-  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: $shadow-sm;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   animation: fadeInUp 0.5s ease-out;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform $transition-default, box-shadow $transition-default;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 3px 8px 25px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: $shadow-md;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     width: 100%;
     max-width: 350px;
-    margin: 0 auto 16px auto;
+    margin: 0 auto $spacing-md auto;
     align-items: center;
     padding-left: 0;
   }
 }
 
-.statIcon > img{
+.statIcon > img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -84,48 +85,46 @@
 
 .statIcon {
   font-size: 28px;
-  margin-bottom: 14px;
+  margin-bottom: $spacing-sm;
   border-radius: 50%;
   padding: 9px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     font-size: 0px;
   }
 }
 
 .statLabel {
-  color: #545F7D;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 12px;
+  color: $text-medium;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-sm;
 }
 
 .statValue {
-  font-size: 24px;
-  font-weight: 600;
-  color: #213F7D;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $text-dark;
 }
 
 .tableContainer {
   width: 100%;
-  margin-top: 24px;
-  background: #FFFFFF;
-  border: 1px solid rgba(33, 63, 125, 0.06);
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 4px;
-  padding: 30px;
+  margin-top: $spacing-xl;
+  background: $white;
+  border: 1px solid $border-light;
+  box-shadow: $shadow-sm;
+  border-radius: $border-radius-sm;
+  padding: $spacing-xxl;
   position: relative;
-  
 
-  @media screen and (max-width: 1024px) {
-    padding: 20px;
-    margin-top: 16px;
-
+  @media screen and (max-width: $tablet) {
+    padding: $spacing-lg;
+    margin-top: $spacing-md;
   }
 
-  @media screen and (max-width: 768px) {
-    padding: 16px;
-    margin-top: 12px;
+  @media screen and (max-width: $mobile) {
+    padding: $spacing-md;
+    margin-top: $spacing-sm;
     overflow-x: auto;
     Webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
@@ -140,26 +139,26 @@
   min-width: 1000px;
   z-index: 40px;
 
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-sm;
   }
 }
 
 .tableHeader {
-  background: #FFFFFF;
-  color: #545F7D;
+  background: $white;
+  color: $text-medium;
   text-align: left;
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-xs;
 }
 
 .tableHeaderCell {
-  padding: 12px 0;
+  padding: $spacing-sm 0;
 }
 
 .tableRow {
   border-bottom: 1px solid #F1F1F1;
-  transition: background-color 0.2s ease;
+  transition: background-color $transition-default;
 
   &:hover {
     background-color: #F9F9F9;
@@ -168,17 +167,17 @@
 
 .tableCell {
   padding-top: 21px;
-  font-size: 14px;
-  color: #545F7D;
+  font-size: $font-size-sm;
+  color: $text-medium;
   padding-bottom: 23px;
 }
 
 .statusBadge {
-  border-radius: 100px;
-  padding: 7px 12px;
-  font-weight: 400;
-  font-size: 14px;
-  transition: transform 0.2s ease;
+  border-radius: $border-radius-lg;
+  padding: 7px $spacing-sm;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-sm;
+  transition: transform $transition-default;
 
   &:hover {
     transform: scale(1.05);
@@ -187,7 +186,7 @@
 
 .menuButton {
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform $transition-default;
 
   &:hover {
     transform: scale(1.2);
@@ -210,8 +209,8 @@
 .spinner {
   width: 40px;
   height: 40px;
-  border: 4px solid #39CDCC;
-  border-top: 4px solid #fff;
+  border: 4px solid $primary-teal;
+  border-top: 4px solid $white;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -220,14 +219,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
-  font-size: 14px;
+  padding: $spacing-md 0;
+  font-size: $font-size-sm;
   margin-top: 27px;
-  color: #545F7D;
+  color: $text-medium;
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     flex-direction: column;
-    gap: 15px;
+    gap: $spacing-lg;
     align-items: flex-start;
   }
 }
@@ -236,37 +235,37 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: $spacing-sm;
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     width: 100%;
     justify-content: space-between;
   }
 }
 
 .pageSizeSelector {
-  font-weight: 500;
-  padding: 7px 12px;
-  border-radius: 4px;
-  background-color: #213F7D1A;
+  font-weight: $font-weight-medium;
+  padding: 7px $spacing-sm;
+  border-radius: $border-radius-sm;
+  background-color: rgba(33, 63, 125, 0.1);
   display: flex;
-  gap: 16px;
+  gap: $spacing-md;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 
-  @media (max-width: 768px) {
-    padding: 5px 10px;
-    gap: 8px;
+  @media (max-width: $mobile) {
+    padding: 5px $spacing-sm;
+    gap: $spacing-xs;
   }
 }
 
 .paginationControls {
   display: flex;
-  gap: 8px;
+  gap: $spacing-xs;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
@@ -274,17 +273,17 @@
 }
 
 .paginationButton {
-  padding: 5px 8px;
-  border-radius: 4px;
+  padding: 5px $spacing-xs;
+  border-radius: $border-radius-sm;
   border: 1px solid #ccc;
-  background: #fff;
+  background: $white;
   cursor: pointer;
   min-width: 32px;
   min-height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all $transition-default;
 
   &:not(:disabled):hover {
     background: #F5F5F5;
@@ -292,21 +291,21 @@
   }
 
   &:disabled {
-    background: #213F7D1A;
+    background: rgba(33, 63, 125, 0.1);
     cursor: not-allowed;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     min-width: 28px;
     min-height: 28px;
   }
 }
 
 .pageNumber {
-  padding: 5px 8px;
-  background: #fff;
-  color: #545F7D;
-  font-size: 16px;
+  padding: 5px $spacing-xs;
+  background: $white;
+  color: $text-medium;
+  font-size: $font-size-md;
   min-width: 32px;
   min-height: 32px;
   display: flex;
@@ -314,34 +313,34 @@
   justify-content: center;
   cursor: pointer;
   border: 0;
-  transition: all 0.2s ease;
+  transition: all $transition-default;
 
   &:not(.active):hover {
     background: #F5F5F5;
-    color: #213F7D;
+    color: $text-dark;
   }
 
   &.active {
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     cursor: default;
-    background: #213F7D;
-    color: #fff;
+    background: $text-dark;
+    color: $white;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     min-width: 28px;
     min-height: 28px;
-    font-size: 14px;
+    font-size: $font-size-sm;
   }
 }
 
 .ellipsis {
-  padding: 0 8px;
+  padding: 0 $spacing-xs;
   color: #b0b0c3;
   font-size: 18px;
 
-  @media (max-width: 768px) {
-    font-size: 16px;
+  @media (max-width: $mobile) {
+    font-size: $font-size-md;
   }
 }
 
@@ -366,28 +365,28 @@
   top: 56px;
   left: 0;
   z-index: 10;
-  background: #fff;
-  border-radius: 8px;
-  padding: 24px 18px 18px 18px;
+  background: $white;
+  border-radius: $border-radius-md;
+  padding: $spacing-xl $spacing-lg $spacing-lg $spacing-lg;
   min-width: 320px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  box-shadow: $shadow-md;
   border: 1px solid #E5E5E5;
-  margin-top: 8px;
+  margin-top: $spacing-xs;
   animation: fadeInUp 0.3s;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: $spacing-sm;
 }
 
 .userMenuModal {
   position: absolute;
   z-index: 20;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  background: $white;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-md;
   border: 1px solid #E5E5E5;
   min-width: 180px;
-  padding: 20px 0;
+  padding: $spacing-lg 0;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -396,16 +395,16 @@
 .userMenuItem {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
+  gap: $spacing-xs;
+  padding: $spacing-sm $spacing-lg;
   background: none;
   border: none;
-  color: #545F7D;
-  font-size: 14px;
+  color: $text-medium;
+  font-size: $font-size-sm;
   cursor: pointer;
   text-align: left;
   width: 100%;
-  transition: background 0.15s;
+  transition: background $transition-default;
 }
 
 .userMenuItem:hover {
@@ -413,7 +412,7 @@
 }
 
 .userMenuIcon {
-  gap:8px;
+  gap: $spacing-xs;
   font-size: 18px;
   width: 22px;
   display: flex;

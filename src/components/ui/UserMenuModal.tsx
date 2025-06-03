@@ -10,7 +10,7 @@ interface UserMenuModalProps {
   onViewDetails: () => void;
 }
 
-const UserMenuModal: React.FC<UserMenuModalProps> = ({ user, anchor, onClose, onViewDetails }) => {
+const UserMenuModal: React.FC<UserMenuModalProps> = ({ anchor, onClose, onViewDetails }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
