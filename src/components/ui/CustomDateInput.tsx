@@ -35,20 +35,12 @@ const CustomDateInput: React.FC<CustomDateInputProps> = ({ value, onChange, plac
     }}>
       <DatePicker
         selected={dateValue}
-        onChange={date => onChange(date ? date.toISOString().slice(0, 10) : '')}
+        onChange={(date: Date | null) => onChange(date ? date.toISOString().slice(0, 10) : '')}
         placeholderText={placeholder}
         dateFormat="yyyy-MM-dd"
-        className="custom-date-input"
         popperPlacement="bottom"
-        style={{
-          width: '100%',
-          fontSize: 14,
-          color: value ? '#213F7D' : '#545F7D',
-          padding: '12px 32px 12px 20px',
-          border: 'none',
-          outline: 'none',
-          background: 'transparent',
-        }}
+        className="custom-date-input"
+        wrapperClassName="custom-date-input-wrapper"
       />
       <span style={{ position: 'absolute', right: 13, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>{calendarSvg}</span>
       <style>{`
