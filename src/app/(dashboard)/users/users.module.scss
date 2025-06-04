@@ -322,9 +322,9 @@
 
   &.active {
     font-weight: $font-weight-semibold;
-    cursor: default;
-    background: $text-dark;
-    color: $white;
+    cursor: pointer;
+    color: $text-dark;
+    background-color: $white;
   }
 
   @media (max-width: $mobile) {
